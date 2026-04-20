@@ -15,12 +15,6 @@ def simulate_task(name, duration, lock):
     print(f"[DONE] {name} ({duration})")
     lock.release()
 
-
-#   2. For each (name, duration) in tasks:
-#        t = threading.Thread(target=simulate_task, args=(name, duration, lock))
-#        threads.append(t)
-#   3. Loop to start all threads
-#   4. Loop to join  all threads  (separate loop!)
 def run_threaded(tasks, lock):
     threads = []
     for name, duration in tasks:
